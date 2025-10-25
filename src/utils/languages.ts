@@ -5,9 +5,17 @@ export interface Language {
 }
 
 export const languages: Record<string, Language> = {
-  angular: {
-    name: "Angular",
-    iconName: "angular",
+  webrtc: {
+    name: "WebRTC",
+    iconName: "webrtc",
+  },
+  websocket: {
+    name: "WebSocket",
+    iconName: "websocket",
+  },
+  supabase: {
+    name: "Supabase",
+    iconName: "supabase",
   },
   astro: {
     name: "Astro",

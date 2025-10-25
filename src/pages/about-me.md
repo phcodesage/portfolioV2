@@ -1,11 +1,11 @@
 ---
 layout: /src/layouts/MarkdownAbout.astro
-title: "Fernando López | My Journey in Technology and Web Development 🚀| EFEELE"
+title: "Rechcel Toledo | Phcodesage"
 description: "Web developer, technology enthusiast, and event organizer. From my beginnings in development to creating communities and impactful projects, here I share my journey, experiences, and learnings. 🚀☕"
-author: "Fernando Lopez"
+author: "Rechcel Toledo | Phcodesage"
 image:
   url: "/images/efeeleprofile.webp"
-  alt: "Photo of Fernando Aldair López Ponce (EFEELE) for the blog"
+  alt: "Photo of Rechcel Toledo for the blog"
 ---
 
 I started developing my first commercial projects as a web developer in 2017. Although I've been passionate about technology for as long as I can remember. I discovered the internet at age 6, and along with it, I learned to use **Paint** 🎨 and play **Pinball** on a **Windows XP** computer that my cousins had. Years passed, and I discovered there was a cyber café near my house, so accompanied by my older brother, I spent a lot of time there, watching others play **Age of Empires** ⚔️. When I could, I also played on the computers and investigated how those games worked. But above all, I remember that while sitting there, I watched the owner, Alfredo, the good <a href="https://fred.cpp.mx/" target="_blank" rel="noopener noreferrer">Fred</a>, while he programmed and modeled game maps, or at least that's what I remember. That made me want to try doing the same. I found it incredible how so many things happened on his screen that, although I couldn't understand them, looked amazing. Without a doubt, he was my first influence to get into programming.

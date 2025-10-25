@@ -21,5 +21,9 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-dark'
     },
+    remarkPlugins: [
+      // Add external links plugin
+      (await import('./src/utils/externalLinks.mjs')).externalLinks
+    ],
   },
 });
