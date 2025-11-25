@@ -65,7 +65,7 @@ If we add a background to the child container, we achieve the border effect:
   class="w-full max-w-lg bg-conic/[from_0deg] from-white to-white dark:from-black via-green-400 dark:to-black rounded-2xl p-px"
 >
   <!-- Parent container -->
-  <div class="p-10 rounded-2xl dark:dark:bg-zinc-900 bg-mint-50">
+  <div class="p-10 rounded-2xl dark:dark:bg-zinc-900 bg-violet-50">
     <!-- Child container -->
     <p class="text-white text-center font-semibold">
       By adding a background to the child container, we achieve the border effect

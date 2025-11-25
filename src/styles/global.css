@@ -9,29 +9,29 @@
   --font-roboto: 'Roboto', sans-serif;
   --font-opensans: 'Open Sans', sans-serif;
   --color-blacktext: #171717;
-  --color-mint-50: #ecfdf5;
-  --color-mint-100: #d0fbe5;
-  --color-mint-200: #a4f4cf;
-  --color-mint-300: #6ce9b7;
-  --color-mint-400: #31d69a;
-  --color-mint-500: #0dbc82;
-  --color-mint-600: #03986a;
-  --color-mint-700: #027a58;
-  --color-mint-800: #056047;
-  --color-mint-900: #054f3c;
-  --color-mint-950: #012d22;
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+  --color-violet-800: #5b21b6;
+  --color-violet-900: #4c1d95;
+  --color-violet-950: #2e1065;
 
-  --color-riptide-50: #f0fdfa;
-  --color-riptide-100: #cbfcf1;
-  --color-riptide-200: #96f7e4;
-  --color-riptide-300: #5cecd5;
-  --color-riptide-400: #2bd6c1;
-  --color-riptide-500: #12baa8;
-  --color-riptide-600: #0b9689;
-  --color-riptide-700: #0e776f;
-  --color-riptide-800: #105f5a;
-  --color-riptide-900: #124f4b;
-  --color-riptide-950: #03302f;
+  --color-fuchsia-50: #fdf4ff;
+  --color-fuchsia-100: #fae8ff;
+  --color-fuchsia-200: #f5d0fe;
+  --color-fuchsia-300: #f0abfc;
+  --color-fuchsia-400: #e879f9;
+  --color-fuchsia-500: #d946ef;
+  --color-fuchsia-600: #c026d3;
+  --color-fuchsia-700: #a21caf;
+  --color-fuchsia-800: #86198f;
+  --color-fuchsia-900: #701a75;
+  --color-fuchsia-950: #4a044e;
 
   --animate-rotate: rotate 10s linear infinite;
 
@@ -50,18 +50,18 @@
 }
 
 ::selection {
-	@apply text-white bg-mint-500;
+	@apply text-white bg-violet-500;
 	
   }
 *::-webkit-scrollbar-thumb{
 	border-radius: 20px;
 }
 .dark *{
-	scrollbar-color: #6ce9b7 #012d22;
+	scrollbar-color: #c4b5fd #2e1065;
 	scrollbar-width: thin;
 }
  *{
-	scrollbar-color: #6ce9b7 #d0fbe5;
+	scrollbar-color: #c4b5fd #ede9fe;
 	scrollbar-width: thin;
 	box-sizing: border-box;
 }
@@ -110,7 +110,7 @@ a.inline-block.leading-5.pl-12{
 }
 
 .markdown a {
-	@apply text-xl max-md:text-lg font-semibold dark:text-riptide-300! text-mint-500! underline hover:text-riptide-400! transition-all;
+	@apply text-xl max-md:text-lg font-semibold dark:text-fuchsia-300! text-violet-500! underline hover:text-fuchsia-400! transition-all;
 }
 
 .markdown ol{
@@ -128,12 +128,12 @@ a.inline-block.leading-5.pl-12{
 }
 
 .markdown hr {
-	@apply dark:text-mint-300/50 text-blacktext/30;
+	@apply dark:text-violet-300/50 text-blacktext/30;
 
 }
 
 .markdown blockquote {
-	@apply py-4 border-l-4 border-mint-500 pl-4 italic text-blacktext dark:text-mint-200 bg-mint-50 dark:bg-mint-900/20 backdrop-blur-lg mb-8;
+	@apply py-4 border-l-4 border-violet-500 pl-4 italic text-blacktext dark:text-violet-200 bg-violet-50 dark:bg-violet-900/20 backdrop-blur-lg mb-8;
 }
 
 .markdown blockquote p {
@@ -170,11 +170,11 @@ a.inline-block.leading-5.pl-12{
   }
   
   .task-list-item input[type="checkbox"] {
-	@apply w-5 h-5 accent-mint-300;
+	@apply w-5 h-5 accent-violet-300;
   }
   
   .task-list-item input[type="checkbox"]:checked + span {
-	@apply line-through text-mint-600;
+	@apply line-through text-violet-600;
   }
   
   .task-list-item span {
@@ -235,7 +235,7 @@ a.inline-block.leading-5.pl-12{
 	display: block;
 	width: 400px;
 	height: 400px;
-	background: #31d69a40;
+	background: #a78bfa40;
 	bottom: -400px;
 	right: -300px;
 	position: fixed;
@@ -247,7 +247,7 @@ a.inline-block.leading-5.pl-12{
 
 
 .blur-circle {
-	background-color: rgba(87, 253, 228, 0.29);
+	background-color: rgba(139, 92, 246, 0.29);
 	position: absolute;
 	width: 200px;
 	height: 200px;
@@ -264,7 +264,7 @@ a.inline-block.leading-5.pl-12{
 	display: block;
 	width: 500px;
 	height: 500px;
-	background: #50fd8f25 !important;
+	background: #fdf4ff25 !important;
 	bottom: -150px;
 	right: -150px;
 	position: absolute;
