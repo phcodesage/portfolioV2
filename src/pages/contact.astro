@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Heading from '../components/ui/Heading.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout title="Contact Me | NeonMint">
+  <section class="relative py-20 sm:py-24 overflow-hidden">
+    <!-- Background decorations -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none z-0">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-mint-500/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-riptide-500/20 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center">
+        <Heading tagName="h1" size="h2" text="Get in Touch" textGradient="Let's Talk" level={1} />
+        <p class="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Have a project in mind, a question, or just want to say hi? I'd love to hear from you.
+        </p>
+      </div>
+
+      <div class="relative rounded-2xl bg-linear-to-br from-white/50 to-white/80 dark:from-zinc-900/80 dark:to-zinc-950/80 p-1 shadow-2xl backdrop-blur-sm border border-white/20 dark:border-zinc-800/50">
+        <!-- Card Content -->
+        <div class="rounded-xl bg-white/50 dark:bg-zinc-900/50 p-8 sm:p-10">
+            <form id="contact-form" class="space-y-8">
+                <div class="grid gap-8 sm:grid-cols-2">
+                <div class="space-y-2">
+                    <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 ml-1">Name</label>
+                    <div class="relative">
+                        <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        required
+                        class="block w-full rounded-xl border-0 bg-gray-100/50 dark:bg-zinc-800/50 px-5 py-3.5 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-zinc-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-mint-500 sm:text-sm sm:leading-6 transition-all duration-200"
+                        placeholder="John Doe"
+                        />
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 ml-1">Email</label>
+                    <div class="relative">
+                        <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        class="block w-full rounded-xl border-0 bg-gray-100/50 dark:bg-zinc-800/50 px-5 py-3.5 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-zinc-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-mint-500 sm:text-sm sm:leading-6 transition-all duration-200"
+                        placeholder="john@example.com"
+                        />
+                    </div>
+                </div>
+                </div>
+
+                <div class="space-y-2">
+                <label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 ml-1">Subject</label>
+                <div class="relative">
+                    <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    required
+                    class="block w-full rounded-xl border-0 bg-gray-100/50 dark:bg-zinc-800/50 px-5 py-3.5 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-zinc-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-mint-500 sm:text-sm sm:leading-6 transition-all duration-200"
+                    placeholder="Project Inquiry"
+                    />
+                </div>
+                </div>
+
+                <div class="space-y-2">
+                <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 ml-1">Message</label>
+                <div class="relative">
+                    <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
+                    required
+                    class="block w-full rounded-xl border-0 bg-gray-100/50 dark:bg-zinc-800/50 px-5 py-3.5 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-zinc-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-mint-500 sm:text-sm sm:leading-6 transition-all duration-200 resize-none"
+                    placeholder="Tell me about your project..."
+                    ></textarea>
+                </div>
+                </div>
+
+                <div class="pt-2">
+                    <div class="w-full h-fit from-transparent via-riptide-300 to-transparent dark:from-transparent dark:via-mint-500 dark:to-transparent from-40% to-60% p-px rounded-full hover:shadow-lg hover:shadow-mint-500/30 transition-all duration-300 group">
+                        <button
+                            type="submit"
+                            class="w-full relative flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-riptide-300 to-mint-300 dark:from-riptide-500 dark:to-mint-500 px-8 py-4 text-lg font-medium text-blacktext/90 dark:text-mint-50 hover:bg-linear-to-l transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                        >
+                            <span>Send Message</span>
+                            <Icon name="paperplane" class="size-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                        </button>
+                    </div>
+                </div>
+
+                <div id="form-status" class="hidden rounded-xl p-4 text-center text-sm font-medium animate-fade-in"></div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const statusDiv = document.getElementById('form-status');
+
+  if (form && statusDiv) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      // Disable button
+      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const btnText = submitBtn.querySelector('span') as HTMLSpanElement;
+      const btnIcon = submitBtn.querySelector('svg') as SVGElement;
+      
+      const originalText = btnText.innerText;
+      submitBtn.disabled = true;
+      btnText.innerText = 'Sending...';
+      if(btnIcon) btnIcon.style.display = 'none';
+
+      try {
+        const response = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        const result = await response.json();
+
+        statusDiv.classList.remove('hidden');
+        if (response.ok) {
+          statusDiv.className = 'rounded-xl p-4 text-center text-sm font-medium animate-fade-in bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-green-200 dark:border-green-800';
+          statusDiv.innerText = 'Message sent successfully! I will get back to you soon.';
+          form.reset();
+        } else {
+          throw new Error(result.message || 'Failed to send message');
+        }
+      } catch (error) {
+        statusDiv.className = 'rounded-xl p-4 text-center text-sm font-medium animate-fade-in bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 border border-red-200 dark:border-red-800';
+        statusDiv.innerText = error instanceof Error ? error.message : 'Something went wrong. Please try again.';
+      } finally {
+        submitBtn.disabled = false;
+        btnText.innerText = originalText;
+        if(btnIcon) btnIcon.style.display = 'block';
+        
+        // Hide status after 5 seconds if success
+        if (statusDiv.classList.contains('bg-green-100') || statusDiv.classList.contains('bg-green-900/30')) {
+          setTimeout(() => {
+            statusDiv.classList.add('hidden');
+          }, 5000);
+        }
+      }
+    });
+  }
+</script>
