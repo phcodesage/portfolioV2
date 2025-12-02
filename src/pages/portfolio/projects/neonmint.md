@@ -1,43 +1,46 @@
 ---
 layout:  /src/layouts/ProjectLayout.astro
-title: 'NeonMint'
-pubDate: 2025-04-05
-description: 'NeonMint is a modern, minimalist template crafted for developers and digital creatives.'
-languages: ["astro", "tailwind", "cloudflare", "javascript","vercel"]
+title: 'Cyvera Digitals'
+pubDate: 2024-12-02
+description: 'A modern landing page for our startup agency helping clients launch beautiful websites fast.'
+languages: ["react", "typescript", "tailwind", "vite", "supabase", "framer-motion"]
 image:
-  url: "/images/projects/neonmint.webp"
-  alt: "Thumbnail of Astro arches."
+  url: "/images/projects/cyvra-digitals.png"
+  alt: "Cyvera Digitals landing page screenshot"
 --- 
 
-**NeonMint** is a modern, minimalist web template created for developers, designers, and digital creatives. This project aims to offer an elegant and functional visual experience, combining a dark-toned aesthetic with mint green accents to highlight content without distractions.
+**Cyvera Digitals** is a landing page for our startup agency where we, as a team of designers, developers, and marketers, help clients launch full-blown websites that are fast and beautiful.
 
-Developed with **Astro** and styled with **TailwindCSS**, NeonMint focuses on speed, modularity, and a component-centered architecture.
+Built with modern technologies and smooth animations, the site showcases our agency's capabilities and services in a visually stunning way.
 
 ## 🧩 Features
 
-- Responsive and minimalist design
-- Dark mode aesthetic with mint green accents
-- Clean and reusable UI components
-- Ideal for portfolios, dashboards or tech landing pages
-- Modern typography and clear visual hierarchy
-- Developed with **Astro**
-- Styled with **TailwindCSS**
+- Modern, responsive design with smooth animations
+- Built with React and TypeScript for type safety
+- Framer Motion for fluid animations
+- Lenis for smooth scrolling experience
+- Supabase integration for backend functionality
+- Fast performance with Vite build tool
+- Beautiful UI with Tailwind CSS
 
-## 💡 Technologies used
+## 💡 Technologies Used
 
-- Astro
-- TailwindCSS
-- HTML5
-- JavaScript
+- **React** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **Lenis** - Smooth scrolling
+- **Supabase** - Backend and database
+- **Lucide React** - Icon library
 
+## 🌐 Links
 
-## 🌐 Demo
-
-👉 [View live demo](https://github.com/EFEELE/NeonMint)
+- 👉 [View live site](https://cyvera-digitals.vercel.app/)
+- 💻 [View source code](https://github.com/phcodesage/cyvera-digitals)
 
 ## 🎯 Objective
 
-The purpose of NeonMint is to combine style and functionality in a clean interface that enhances content without overwhelming the user. It's an exercise in design and development focused on visual detail and user experience.
+Cyvera Digitals showcases our agency's ability to create stunning, performant websites. The landing page demonstrates our expertise in modern web development, design, and user experience, serving as both a portfolio piece and a client acquisition tool.
 
-
-🚀 *Developed by EFEELE.*
+🚀 *Developed by phcodesage and the Cyvera Digitals team.*
