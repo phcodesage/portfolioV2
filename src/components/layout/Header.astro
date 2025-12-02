@@ -15,8 +15,8 @@ const routes = ["/", "/portfolio", "/about-me"];
 const isActiveRoute = routes.includes(currentPath);
 
 const navItems = isActiveRoute
-  ? ["home", "experience", "projects", "about", "blog"]
-  : ["home", "blog", "about"]; // Change the items
+  ? ["home", "experience", "projects", "about", "contact", "blog"]
+  : ["home", "blog", "about", "contact"]; // Change the items
 ---
 
 <header
@@ -27,12 +27,12 @@ const navItems = isActiveRoute
   <div
     class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
   >
-    <a href="/" aria-label="Go to home">
-      <Icon
-        name="logo"
-        class="h-6 cursor-pointer transition-all hover:text-violet-300"
-        aria-hidden="true"
-      />
+    <a
+      href="/"
+      aria-label="Go to home"
+      class="px-2 py-2 font-semibold transition-all hover:text-violet-300"
+    >
+      phcodesage
     </a>
 
     <Navigation items={navItems} />

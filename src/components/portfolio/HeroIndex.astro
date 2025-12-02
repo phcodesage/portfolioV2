@@ -80,7 +80,7 @@ const {
             >{profileTitle}</span
           > with <span
             class="bg-linear-to-r from-fuchsia-500 to-violet-500 bg-clip-text font-black text-transparent dark:from-fuchsia-300 dark:to-violet-200"
-            >3 years of experience</span
+            >3+ years of experience</span
           >, passionate about development, technology, and coffee that sparks
           ideas. I love bringing digital projects to life. 🚀☕
         </p>
@@ -105,7 +105,7 @@ const {
     class="mx-auto grid max-w-7xl grid-cols-2 grid-rows-4 max-sm:gap-3 gap-4 max-md:h-[80vh] max-sm:h-[900px] max-xl:h-[550px] xl:h-[700px] md:grid-cols-4 md:grid-rows-2"
   >
     <div
-      class="col-start-2 row-start-2 flex flex-col gap-3 rounded-2xl border border-emerald-50 bg-linear-to-r from-fuchsia-200 to-violet-200 p-8 dark:border-zinc-800 dark:border-2 dark:bg-zinc-800 dark:bg-gradient-radial dark:from-fuchsia-500 dark:to-violet-500 max-md:gap-0 max-xl:p-5 max-md:p-4 max-lg:gap-1 md:col-start-4"
+      class="col-span-2 col-start-1 row-start-2 flex flex-col gap-3 rounded-2xl border border-emerald-50 bg-linear-to-r from-fuchsia-200 to-violet-200 p-8 dark:border-zinc-800 dark:border-2 dark:bg-zinc-800 dark:bg-gradient-radial dark:from-fuchsia-500 dark:to-violet-500 max-md:gap-0 max-xl:p-5 max-md:p-4 max-lg:gap-1 md:col-start-3"
     >
       <div class="flex flex-col-reverse items-start gap-4 max-md:gap-2">
         <Heading text="Beyond the Code" level={2} />
@@ -113,36 +113,6 @@ const {
 
       <div class="overflow-y-auto">
         <Hobbies />
-      </div>
-    </div>
-
-    <div
-      class="col-start-1 row-start-2 rounded-2xl bg-linear-to-r from-violet-300 dark:from-violet-600 to-violet-50 dark:to-violet-200/5 hover:to-violet-300/30 dark:hover:to-violet-600/30 p-[.2rem] transition-all ease-in duration-150 hover:scale-105 hover:shadow-[0_20px_50px_rgba(13,188,130,0.4)] z-40 md:col-start-3"
-    >
-      <div class="h-full w-full overflow-hidden rounded-2xl dark:bg-zinc-900">
-        <div
-          class="relative h-full w-full overflow-hidden rounded-2xl bg-linear-to-tr from-fuchsia-100 to-white dark:from-transparent dark:bg-linear-to-bl dark:to-transparent"
-        >
-          <a
-            target="_blank"
-            href={github}
-            aria-label="View this site's code repository on GitHub"
-          >
-            <div
-              class="relative flex h-full flex-col gap-8 p-8 dark:before:bg-[radial-gradient(circle,rgba(13,188,130)_0,rgba(1,45,34)_100%)] before:bg-[radial-gradient(circle,rgba(95,255,202)_0,rgba(144,253,210)_100%)] before:absolute before:left-30 before:bottom-30 before:h-[30%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-90 before:transition before:z-0 max-xl:p-5 max-md:p-4 xl:before:bottom-10"
-            >
-              <div class="z-2">
-                <Heading text="Do you like this site's design?" level={3} />
-              </div>
-
-              <Icon
-                class="absolute -bottom-10 left-30 size-50 text-violet-500/30 group-hover:animate-pulse ease-in-out max-sm:left-10 max-md:left-30 xl:size-56 xl:-bottom-5 xl:-right-24"
-                name="github"
-                aria-hidden="true"
-              />
-            </div>
-          </a>
-        </div>
       </div>
     </div>
 
@@ -202,7 +172,7 @@ const {
         </p>
         <img
           class="relative left-0 z-0 mt-40 w-full object-cover transition-all ease-in-out duration-500 group-hover:rotate-2 group-hover:scale-185 max-xl:mt-28 max-lg:mt-10 max-sm:mt-0 max-md:scale-100 max-sm:scale-125 scale-180 max-md:group-hover:scale-105 before:bg-[radial-gradient(circle,rgba(13,188,130)_0,rgba(1,45,34)_100%)] before:absolute before:left-30 before:-bottom-0 before:h-[80%] before:aspect-square before:rounded-full before:blur-3xl before:opacity-80 before:-z-10 before:transition"
-          src={portfolioImage}
+          src="/images/portfolio.png"
           alt="View of two website interfaces with modern and dark design. The first screen shows the title 'Behind the Code' with a rocket and dark background, explaining the origin of a community software project. The second screen presents a platform for finding speakers, with an attractive design, expert photos, and a prominent search button."
           loading="lazy"
           width="480"

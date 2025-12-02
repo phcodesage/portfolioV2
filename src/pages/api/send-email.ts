@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 export const POST: APIRoute = async ({ request }) => {
   if (request.headers.get('Content-Type') !== 'application/json') {
@@ -17,41 +17,33 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: import.meta.env.GMAIL_USER,
-      pass: import.meta.env.GMAIL_PASS,
-    },
-  });
-
-  const mailOptions = {
-    from: `"${name}" <${email}>`, // Sender address (note: Gmail might override this to the authenticated user)
-    to: import.meta.env.GMAIL_USER, // List of receivers (sending to yourself)
-    replyTo: email,
-    subject: `[Portfolio Contact] ${subject}`,
-    text: `
-Name: ${name}
-Email: ${email}
-Subject: ${subject}
-
-Message:
-${message}
-    `,
-    html: `
-<h3>New Contact Message</h3>
-<p><strong>Name:</strong> ${name}</p>
-<p><strong>Email:</strong> ${email}</p>
-<p><strong>Subject:</strong> ${subject}</p>
-<br/>
-<p><strong>Message:</strong></p>
-<p>${message.replace(/\n/g, '<br>')}</p>
-    `,
-  };
+  const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
   try {
-    await transporter.sendMail(mailOptions);
-    return new Response(JSON.stringify({ message: 'Email sent successfully' }), {
+    const { data, error } = await resend.emails.send({
+      from: 'Portfolio Contact <onboarding@resend.dev>', // Use your verified domain later
+      to: [import.meta.env.CONTACT_EMAIL], // Your email to receive messages
+      replyTo: email, // Visitor's email for easy replies
+      subject: `[Portfolio Contact] ${subject}`,
+      html: `
+        <h2>New Contact Message</h2>
+        <p><strong>From:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subject:</strong> ${subject}</p>
+        <br/>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `,
+    });
+
+    if (error) {
+      console.error('Resend error:', error);
+      return new Response(JSON.stringify({ message: 'Failed to send email', error: error.message }), {
+        status: 500,
+      });
+    }
+
+    return new Response(JSON.stringify({ message: 'Email sent successfully', data }), {
       status: 200,
     });
   } catch (error) {

@@ -13,17 +13,19 @@
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.0",
     "@tailwindcss/vite": "^4.1.8",
-    "@types/nodemailer": "^7.0.4",
     "@vercel/speed-insights": "^1.2.0",
     "alpinejs": "^3.14.9",
     "astro": "^5.13.1",
     "astro-icon": "^1.1.5",
-    "nodemailer": "^7.0.10",
+    "canvas-confetti": "^1.9.4",
+    "lenis": "^1.3.15",
     "preact": "^10.26.2",
     "prismjs": "^1.30.0",
+    "resend": "^6.5.2",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
     "eslint": "^9.22.0",
     "eslint-plugin-astro": "^1.3.1",
     "tailwindcss-animated": "^2.0.0"
