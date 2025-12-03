@@ -118,8 +118,24 @@ export const languages: Record<string, Language> = {
     name: "Python",
     iconName: "python",
   },
+  react: {
+    name: "React",
+    iconName: "react",
+  },
+  "framer-motion": {
+    name: "Framer Motion",
+    iconName: "framer-motion",
+  },
+  lenis: {
+    name: "Lenis",
+    iconName: "lenis",
+  },
+  lucide: {
+    name: "Lucide",
+    iconName: "lucide",
+  },
 };
 
 export const getLanguage = (lang: string): Language => {
   return languages[lang] || languages.html;
-}; 
+};
