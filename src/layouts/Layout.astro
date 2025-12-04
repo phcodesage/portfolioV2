@@ -2,7 +2,8 @@
 import "../styles/global.css";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
+import Analytics from "@vercel/analytics/astro";
 const {
   pageTitle = "Rech | phcodesage portfolio 🚀",
   description = "Welcome to phcodesage, where I develop software and share knowledge.",
@@ -21,14 +22,10 @@ const SEO = {
   twitter: "@phcodesage",
 };
 
-
 const twitterimage = `${siteUrl}${ogimage.url}`;
 ---
 
-<html
-  lang="en"
-  class="dark:bg-[#0E0E11] bg-violet-50/5 font-montserrat"
->
+<html lang="en" class="dark:bg-[#0E0E11] bg-violet-50/5 font-montserrat">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -46,7 +43,7 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta name="description" content={description} />
     <meta name="author" content={SEO.author} />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={`${Astro.site}${Astro.url.pathname}`}>
+    <link rel="canonical" href={`${Astro.site}${Astro.url.pathname}`} />
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
@@ -56,7 +53,6 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SEO.sitename} />
     <meta property="og:locale" content={SEO.locale} />
-    
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -65,15 +61,15 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta name="twitter:image" content={twitterimage} />
     <meta name="twitter:image:alt" content={ogimage.alt} />
     <meta name="twitter:site" content={SEO.twitter} />
-  
-    <meta name="theme-color" content="#0E0E11"/>
+
+    <meta name="theme-color" content="#0E0E11" />
 
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
-    
   </head>
   <body class="overflow-x-hidden">
-    <SpeedInsights/>
+    <SpeedInsights />
+    <Analytics />
     <div class="blur-circle"></div>
     <div
       style="  background:linear-gradient(45deg, rgba(96, 250, 155, 0) 10.79%, rgba(96, 250, 170, 0.03) 40.92%, rgba(96, 250, 155, 0) 90.35%)"
@@ -82,7 +78,7 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     </div>
     <Header />
 
-    <div class="min-h-[85vh] ">
+    <div class="min-h-[85vh]">
       <slot />
     </div>
 
